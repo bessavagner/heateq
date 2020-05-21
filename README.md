@@ -47,6 +47,15 @@ Here's the sample image:
 * [Numpy](https://numpy.org/)
 * [scipy](https://www.scipy.org/)
 
+## Authors
+
+* **Vagner Bessa** - *Initial work* - [bessava](https://github.com/bessava)
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bessava/heateq/blob/master/LICENSE) file for details
+
+## Acknowledgments
+
+* IFCE - Instituto Federal de Ciência, Tecnologia e Educação do Ceara - Brazil 
+* Inspiration: Steve Brunton [See his chanel](https://www.youtube.com/channel/UCm5mt-A4w61lknZ9lCsZtBw)
