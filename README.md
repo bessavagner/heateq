@@ -37,4 +37,16 @@ plt.contourf(xscale, t, u, 100)
 plt.colorbar()
 plt.show()
 ```
+Here's the sample image:
 
+![Time varying map of the temperature distribution](https://github.com/bessava/heateq/blob/master/sample.png)
+
+
+## Built With
+
+* [Numpy](https://numpy.org/)
+* [scipy](https://www.scipy.org/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
