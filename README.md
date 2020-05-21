@@ -7,7 +7,7 @@ This module solve the partial differential (PDE) equation describing, for instan
 
   <img src="https://render.githubusercontent.com/render/math?math=\LARGE \frac{\partial u}{\partial t} = D\frac{\partial^2 u}{\partial x^2}">
 
-The boundary condition is <img src="https://render.githubusercontent.com/render/math?math=\large u(-L, t) = u(-L, t) = 0">, where <img src="https://render.githubusercontent.com/render/math?math=\large L"> is the size of the sample.
+The boundary condition is <img src="https://render.githubusercontent.com/render/math?math=\large \frac{\partial u}{\partial t}(-L, t) = \frac{\partial u}{\partial t}(-L, t) = 0">, where <img src="https://render.githubusercontent.com/render/math?math=\large L"> is the size of the sample.
 
 ### Prerequisites
 
