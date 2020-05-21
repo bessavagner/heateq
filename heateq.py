@@ -93,5 +93,5 @@ if __name__ == '__main__':
     plt.ylabel(r"time (s)", fontsize=16)
     cbar = plt.colorbar()
     cbar.set_label("Temperature", fontsize=16, rotation=270,
-                    labelpad=25, y=0.45)
+                   labelpad=25, y=0.45)
     plt.show()
