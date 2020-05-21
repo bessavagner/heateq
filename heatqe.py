@@ -88,6 +88,10 @@ if __name__ == '__main__':
     u = solve(dudt, u0, t, D, k)
 
     plt.figure(figsize=(8, 8))
-    plt.contourf(xscale, t, u, 100)
-    plt.colorbar()
+    plt.contourf(xscale, t, u, 100, cmap="magma")
+    plt.xlabel(r"$x(mm)$", fontsize=16)
+    plt.ylabel(r"time (s)", fontsize=16)
+    cbar = plt.colorbar()
+    cbar.set_label("Temperature", fontsize=16, rotation=270,
+                    labelpad=25, y=0.45)
     plt.show()
