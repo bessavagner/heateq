@@ -7,7 +7,7 @@ This module solve the partial differential (PDE) equation describing, for instan
 
   <img src="https://render.githubusercontent.com/render/math?math=\LARGE \frac{\partial u}{\partial t} = D\frac{\partial^2 u}{\partial x^2}">
 
-The boundary condition is <img src="https://render.githubusercontent.com/render/math?math=\large u(-L, t) = u(-L, t) = 0">, where <img src="https://render.githubusercontent.com/render/math?math=\large L"> is the size of a square sample.
+The boundary condition is <img src="https://render.githubusercontent.com/render/math?math=\large u(-L, t) = u(-L, t) = 0">, where <img src="https://render.githubusercontent.com/render/math?math=\large L"> is the size of the sample.
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ pip install scipy
 
 ### Usage
 
-In example bellow, the defalt sample is initiated: 10 mm square sample (with spacing 0.1mm - equivalent to 100 points), heated at 100°C (372 K) and smoothly cooled down until both edges at 20ºC (296 K). The choosen material is iron (D = 23 mm²/s).
+In example bellow, the defalt sample is initiated: 10 mm linear sample (with spacing 0.1mm - equivalent to 100 points), heated at 100°C (372 K) and smoothly cooled down until both edges at 20ºC (296 K). The choosen material is iron (D = 23 mm²/s).
 ```python
 import heateq as heq
 import matplotlib.pyplot as plt
@@ -37,4 +37,25 @@ plt.contourf(xscale, t, u, 100)
 plt.colorbar()
 plt.show()
 ```
+Here's the sample image:
 
+![Time varying map of the temperature distribution](https://github.com/bessava/heateq/blob/master/sample.png)
+
+
+## Built With
+
+* [Numpy](https://numpy.org/)
+* [scipy](https://www.scipy.org/)
+
+## Authors
+
+* **Vagner Bessa** - *Initial work* - [bessava](https://github.com/bessava)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bessava/heateq/blob/master/LICENSE) file for details
+
+## Acknowledgments
+
+* IFCE - Instituto Federal de Ciência, Tecnologia e Educação do Ceara - Brazil 
+* Inspiration: Steve Brunton [See his chanel](https://www.youtube.com/channel/UCm5mt-A4w61lknZ9lCsZtBw)
