@@ -3,7 +3,17 @@
 import scipy.fftpack as scifft
 
 
-def dutdt(u, t, D, k):
+def dutdt(u, D, k):
+    """The righthand side of the heat equation
+
+    Arguments:
+        u {numpy.ndarray} -- The temperature distribution
+        D {float} -- Diffusive coeffitient
+        k {numpy.ndarray} -- fft frequencies
+
+    Returns:
+        numpy.ndarray -- rhs of the heat equation derived
+    """
     d2u_hat = -np.power(k, 2)*scifft.fft(u)
     d2u = scifft.fft(d2u_hat).real
     d2u[0] = d2u[-1] = 0
@@ -20,19 +30,21 @@ def initiate(D=23, time=0.3,
     The default
 
     Args:
-        u0: 1D numpy array containing the initial condition.
-        D: the heat coefficient. D=23 mm²/2 for iron.
-        time: real simulation time. time=0.3 s.
-        xsize: the length of the simulated system. size=10 mm.
-        dx: the length spacing. dx=0.1 mm.
-        dt: time step.
-        temp_src: hottest temperature for the initial condition.
-        temp_amp: coldest temperature for the initial condition.
-        silent: whether to print messages.
+        u0 {numpy.ndarray} -- 1D numpy array containing the initial condition.
+        D {float} -- the heat coefficient. D=23 mm²/2 for iron.
+        time {numpy.ndarray} -- real simulation time. time=0.3 s.
+        xsize {float} -- the length of the simulated system. size=10 mm.
+        dx {float} -- the length spacing. dx=0.1 mm.
+        dt {float} -- time step.
+        temp_src {float} -- hottest temperature for the initial condition.
+        temp_amp {float} -- coldest temperature for the initial condition.
+        silent {float} -- whether to print messages.
     returns:
-        u0: numpy array containing solution. Shape (time/dt, xscale/dx).
-        t: numpy array containing all instants. Shape(time/dt,)
-        xscale: numpy array containg space grid. Shape (xscale/dx, )"""
+        u0 {numpy.ndarray} -- the initial condition
+            as a gaussian distribution od temperature.
+            Shape (time/dt, xscale/dx).
+        t {numpy.ndarray} -- instants of time. Shape(time/dt,)
+        xscale {numpy.ndarray} -- space grid. Shape (xscale/dx, )"""
 
     xscale = np.arange(-0.5*xsize, 0.5*xsize, dx)
     ntime = int(np.round(time/dt))
@@ -47,3 +59,7 @@ def initiate(D=23, time=0.3,
         print(f"Time step: {dt:.3e}")
 
     return u0, t, xscale
+
+
+a = np.array([1, 1, 1])
+print(type(a))
