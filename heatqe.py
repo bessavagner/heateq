@@ -83,7 +83,6 @@ if __name__ == '__main__':
     D = 23  # for iron
     dx = 0.1
     u0, t, xscale = initiate(dx=dx)
-    u0.shape
     k = kappa(u0, dx)
 
     u = solve(dudt, u0, t, D, k)
