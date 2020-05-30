@@ -49,7 +49,7 @@ Here's the sample image:
 
 ## Authors
 
-* **Vagner Bessa** - *Initial work* - [bessava](https://github.com/bessava)
+* **Vagner Bessa** - *Initial work* - [bessava](https://github.com/bessava) or [bessavagner](https://github.com/bessavagner)
 
 ## License
 
